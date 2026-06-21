@@ -86,6 +86,7 @@
             user.Name = "user";
             user.Size = new Size(125, 27);
             user.TabIndex = 3;
+            user.TextChanged += user_TextChanged;
             // 
             // password
             // 

@@ -64,5 +64,10 @@ namespace LIBRERIA_SAKURA_MANGA_SHOP
         {
 
         }
+
+        private void user_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
