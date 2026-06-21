@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
             modulo_ventas = new Button();
             button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
+            btn_modulo_proveedor = new Button();
+            btn_reportes = new Button();
+            btn_configuracion = new Button();
             button6 = new Button();
             pictureBox1 = new PictureBox();
             label1 = new Label();
@@ -75,36 +75,40 @@
             button2.TabIndex = 1;
             button2.Text = "INVENTARIO 📦";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
-            // button3
+            // btn_modulo_proveedor
             // 
-            button3.BackColor = Color.MistyRose;
-            button3.Location = new Point(117, 429);
-            button3.Name = "button3";
-            button3.Size = new Size(255, 70);
-            button3.TabIndex = 2;
-            button3.Text = "COMPRAS Y PROVEEDORES 🚚";
-            button3.UseVisualStyleBackColor = false;
+            btn_modulo_proveedor.BackColor = Color.MistyRose;
+            btn_modulo_proveedor.Location = new Point(117, 429);
+            btn_modulo_proveedor.Name = "btn_modulo_proveedor";
+            btn_modulo_proveedor.Size = new Size(255, 70);
+            btn_modulo_proveedor.TabIndex = 2;
+            btn_modulo_proveedor.Text = "COMPRAS Y PROVEEDORES 🚚";
+            btn_modulo_proveedor.UseVisualStyleBackColor = false;
+            btn_modulo_proveedor.Click += btn_modulo_proveedor_Click;
             // 
-            // button4
+            // btn_reportes
             // 
-            button4.BackColor = Color.MistyRose;
-            button4.Location = new Point(117, 544);
-            button4.Name = "button4";
-            button4.Size = new Size(255, 67);
-            button4.TabIndex = 3;
-            button4.Text = "REPORTES Y CAJA CHICA 📊";
-            button4.UseVisualStyleBackColor = false;
+            btn_reportes.BackColor = Color.MistyRose;
+            btn_reportes.Location = new Point(117, 544);
+            btn_reportes.Name = "btn_reportes";
+            btn_reportes.Size = new Size(255, 67);
+            btn_reportes.TabIndex = 3;
+            btn_reportes.Text = "REPORTES Y CAJA CHICA 📊";
+            btn_reportes.UseVisualStyleBackColor = false;
+            btn_reportes.Click += btn_reportes_Click;
             // 
-            // button5
+            // btn_configuracion
             // 
-            button5.BackColor = Color.MistyRose;
-            button5.Location = new Point(116, 656);
-            button5.Name = "button5";
-            button5.Size = new Size(253, 71);
-            button5.TabIndex = 4;
-            button5.Text = "CONFIGURACIÓN DE SEGURIDAD ⚙️";
-            button5.UseVisualStyleBackColor = false;
+            btn_configuracion.BackColor = Color.MistyRose;
+            btn_configuracion.Location = new Point(116, 656);
+            btn_configuracion.Name = "btn_configuracion";
+            btn_configuracion.Size = new Size(253, 71);
+            btn_configuracion.TabIndex = 4;
+            btn_configuracion.Text = "CONFIGURACIÓN DE SEGURIDAD ⚙️";
+            btn_configuracion.UseVisualStyleBackColor = false;
+            btn_configuracion.Click += btn_configuracion_Click;
             // 
             // button6
             // 
@@ -115,6 +119,7 @@
             button6.TabIndex = 5;
             button6.Text = "CERRAR SESIÓN 🔓";
             button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
             // 
             // pictureBox1
             // 
@@ -148,11 +153,11 @@
             panel1.Controls.Add(label3);
             panel1.Controls.Add(button6);
             panel1.Controls.Add(label2);
-            panel1.Controls.Add(button5);
+            panel1.Controls.Add(btn_configuracion);
             panel1.Controls.Add(pictureBox1);
-            panel1.Controls.Add(button4);
+            panel1.Controls.Add(btn_reportes);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(button3);
+            panel1.Controls.Add(btn_modulo_proveedor);
             panel1.Controls.Add(modulo_ventas);
             panel1.Controls.Add(button2);
             panel1.Location = new Point(12, 12);
@@ -257,6 +262,7 @@
             DoubleBuffered = true;
             Name = "MenuForm";
             Text = "Librería Sakura - Menú Principal 🌸";
+            WindowState = FormWindowState.Maximized;
             Load += MenuForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
@@ -273,9 +279,9 @@
 
         private Button modulo_ventas;
         private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
+        private Button btn_modulo_proveedor;
+        private Button btn_reportes;
+        private Button btn_configuracion;
         private Button button6;
         private PictureBox pictureBox1;
         private Label label1;

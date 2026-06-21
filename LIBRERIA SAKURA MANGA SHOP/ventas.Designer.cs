@@ -199,6 +199,7 @@
             // textBox3
             // 
             textBox3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            textBox3.BackColor = Color.White;
             textBox3.Location = new Point(1278, 400);
             textBox3.Name = "textBox3";
             textBox3.ReadOnly = true;
@@ -388,6 +389,7 @@
             Controls.Add(panel1);
             Name = "ventas";
             Text = "ventas";
+            Load += ventas_Load;
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel3.PerformLayout();

@@ -16,5 +16,10 @@ namespace LIBRERIA_SAKURA_MANGA_SHOP
         {
             InitializeComponent();
         }
+
+        private void butProducto_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

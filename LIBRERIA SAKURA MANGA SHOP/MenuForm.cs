@@ -43,5 +43,39 @@ namespace LIBRERIA_SAKURA_MANGA_SHOP
         {
             abrirpanel(new ventas());
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            abrirpanel(new inventario());
+        }
+
+        private void btn_modulo_proveedor_Click(object sender, EventArgs e)
+        {
+            abrirpanel(new compraProveedor());
+        }
+
+        private void btn_reportes_Click(object sender, EventArgs e)
+        {
+            abrirpanel(new reportes());
+        }
+
+        private void btn_configuracion_Click(object sender, EventArgs e)
+        {
+            abrirpanel(new configuracion());
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show("¿Estás seguro de que deseas cerrar sesión?",
+                             "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (resultado == DialogResult.Yes)
+            {
+                this.Hide();
+                login login = new login();
+                login.Show();
+            }
+        }
     }
 }
+

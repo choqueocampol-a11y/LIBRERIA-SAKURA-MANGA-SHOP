@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace LIBRERIA_SAKURA_MANGA_SHOP
 {
-    public partial class proveedores : Form
+    public partial class compraProveedor : Form
     {
-        public proveedores()
+        public compraProveedor()
         {
             InitializeComponent();
+        }
+
+        private void labelCosto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

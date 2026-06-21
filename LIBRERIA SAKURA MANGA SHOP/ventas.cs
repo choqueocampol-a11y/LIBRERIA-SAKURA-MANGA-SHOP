@@ -56,5 +56,10 @@ namespace LIBRERIA_SAKURA_MANGA_SHOP
         {
 
         }
+
+        private void ventas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
