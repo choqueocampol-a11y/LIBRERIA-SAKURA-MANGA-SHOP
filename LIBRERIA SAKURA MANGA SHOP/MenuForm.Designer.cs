@@ -64,6 +64,7 @@
             button1.TabIndex = 0;
             button1.Text = "MÓDULO DE VENTAS \U0001f6d2";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
