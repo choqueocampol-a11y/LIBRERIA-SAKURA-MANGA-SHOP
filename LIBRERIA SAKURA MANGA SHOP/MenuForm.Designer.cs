@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MenuForm));
-            button1 = new Button();
+            modulo_ventas = new Button();
             button2 = new Button();
             button3 = new Button();
             button4 = new Button();
@@ -55,16 +55,16 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // modulo_ventas
             // 
-            button1.BackColor = Color.MistyRose;
-            button1.Location = new Point(116, 206);
-            button1.Name = "button1";
-            button1.Size = new Size(255, 71);
-            button1.TabIndex = 0;
-            button1.Text = "MÓDULO DE VENTAS \U0001f6d2";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            modulo_ventas.BackColor = Color.MistyRose;
+            modulo_ventas.Location = new Point(116, 206);
+            modulo_ventas.Name = "modulo_ventas";
+            modulo_ventas.Size = new Size(255, 71);
+            modulo_ventas.TabIndex = 0;
+            modulo_ventas.Text = "MÓDULO DE VENTAS \U0001f6d2";
+            modulo_ventas.UseVisualStyleBackColor = false;
+            modulo_ventas.Click += modulo_ventas_Click;
             // 
             // button2
             // 
@@ -153,7 +153,7 @@
             panel1.Controls.Add(button4);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(button3);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(modulo_ventas);
             panel1.Controls.Add(button2);
             panel1.Location = new Point(12, 12);
             panel1.Name = "panel1";
@@ -241,9 +241,9 @@
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.MistyRose;
             panel2.BackgroundImageLayout = ImageLayout.Zoom;
-            panel2.Location = new Point(480, 60);
+            panel2.Location = new Point(437, 12);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1055, 754);
+            panel2.Size = new Size(1143, 899);
             panel2.TabIndex = 9;
             // 
             // MenuForm
@@ -257,6 +257,7 @@
             DoubleBuffered = true;
             Name = "MenuForm";
             Text = "Librería Sakura - Menú Principal 🌸";
+            Load += MenuForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -270,7 +271,7 @@
 
         #endregion
 
-        private Button button1;
+        private Button modulo_ventas;
         private Button button2;
         private Button button3;
         private Button button4;

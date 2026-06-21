@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Libreria_Datos
+﻿namespace Libreria_Datos
 {
     public class UsuarioModel
     {
@@ -12,6 +6,6 @@ namespace Libreria_Datos
         public string Nombre { get; set; }
         public string Username { get; set; }
         public string Nombre_Rol { get; set; }
-        
+
     }
 }

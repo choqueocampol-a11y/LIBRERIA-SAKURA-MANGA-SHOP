@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
 
@@ -10,7 +6,7 @@ namespace Libreria_Datos
 {
     public class UsuarioDatos
     {
-        private ConexionBD conexion = new ConexionBD ();
+        private ConexionBD conexion = new ConexionBD();
 
         public UsuarioModel ValidarUsuario(string username, string password)
         {
@@ -20,17 +16,17 @@ namespace Libreria_Datos
             {
                 using (SqlCommand cmd = new SqlCommand("sp_ValidarUsuario", con))
                 {
-                    cmd.CommandType = CommandType.StoredProcedure; 
+                    cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@Username", username);
                     cmd.Parameters.AddWithValue("@Password", password);
 
                     try
                     {
-                        con.Open(); 
+                        con.Open();
 
                         using (SqlDataReader lector = cmd.ExecuteReader())
                         {
-                            if (lector.Read()) 
+                            if (lector.Read())
                             {
                                 usuarioEncontrado = new UsuarioModel()
                                 {
@@ -53,5 +49,5 @@ namespace Libreria_Datos
         }
     }
 }
-    
+
 

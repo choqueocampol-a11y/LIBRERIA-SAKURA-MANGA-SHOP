@@ -17,9 +17,31 @@ namespace LIBRERIA_SAKURA_MANGA_SHOP
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void abrirpanel(object formhijo)
+        {
+            if (this.panel2.Controls.Count > 0)
+                this.panel2.Controls.RemoveAt(0);
+            Form fh = formhijo as Form;
+            fh.TopLevel = false;
+            fh.FormBorderStyle = FormBorderStyle.None;
+            fh.Dock = DockStyle.Fill;
+            this.panel2.Controls.Add(fh);
+            this.panel2.Tag = fh;
+            fh.Show();
+        }
+
+        private void modulo_ventas_Click(object sender, EventArgs e)
+        {
+            abrirpanel(new ventas());
         }
     }
 }
