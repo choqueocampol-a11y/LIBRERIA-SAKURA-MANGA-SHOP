@@ -32,24 +32,24 @@
             panel1 = new Panel();
             label1 = new Label();
             panel2 = new Panel();
-            pictureBox4 = new PictureBox();
+            pictureBoxBuscar = new PictureBox();
             label2 = new Label();
-            textBox1 = new TextBox();
+            txtBuacarProducto = new TextBox();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
-            button3 = new Button();
-            button2 = new Button();
+            btnEliminar = new Button();
+            btnModificar = new Button();
             butProducto = new Button();
             button1 = new Button();
-            dataGridView1 = new DataGridView();
+            dgvInventario = new DataGridView();
             Nombre = new DataGridViewTextBoxColumn();
             Tomo = new DataGridViewTextBoxColumn();
             Precio = new DataGridViewTextBoxColumn();
             Stock = new DataGridViewTextBoxColumn();
             Ubicación = new DataGridViewTextBoxColumn();
             panel3 = new Panel();
-            dataGridView2 = new DataGridView();
+            dgvAlertaStock = new DataGridView();
             Producto = new DataGridViewTextBoxColumn();
             Tomo2 = new DataGridViewTextBoxColumn();
             Stock1 = new DataGridViewTextBoxColumn();
@@ -59,13 +59,13 @@
             label4 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBuscar).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvInventario).BeginInit();
             panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlertaStock).BeginInit();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             SuspendLayout();
@@ -96,15 +96,15 @@
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel2.BackColor = Color.SeaShell;
-            panel2.Controls.Add(pictureBox4);
+            panel2.Controls.Add(pictureBoxBuscar);
             panel2.Controls.Add(label2);
-            panel2.Controls.Add(textBox1);
+            panel2.Controls.Add(txtBuacarProducto);
             panel2.Controls.Add(panel1);
             panel2.Controls.Add(pictureBox3);
             panel2.Controls.Add(pictureBox2);
             panel2.Controls.Add(pictureBox1);
-            panel2.Controls.Add(button3);
-            panel2.Controls.Add(button2);
+            panel2.Controls.Add(btnEliminar);
+            panel2.Controls.Add(btnModificar);
             panel2.Controls.Add(butProducto);
             panel2.Controls.Add(button1);
             panel2.Location = new Point(12, 115);
@@ -112,16 +112,16 @@
             panel2.Size = new Size(1565, 89);
             panel2.TabIndex = 1;
             // 
-            // pictureBox4
+            // pictureBoxBuscar
             // 
-            pictureBox4.BackColor = Color.PaleVioletRed;
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(1207, 30);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(32, 32);
-            pictureBox4.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox4.TabIndex = 8;
-            pictureBox4.TabStop = false;
+            pictureBoxBuscar.BackColor = Color.PaleVioletRed;
+            pictureBoxBuscar.Image = (Image)resources.GetObject("pictureBoxBuscar.Image");
+            pictureBoxBuscar.Location = new Point(1207, 30);
+            pictureBoxBuscar.Name = "pictureBoxBuscar";
+            pictureBoxBuscar.Size = new Size(32, 32);
+            pictureBoxBuscar.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBoxBuscar.TabIndex = 8;
+            pictureBoxBuscar.TabStop = false;
             // 
             // label2
             // 
@@ -134,12 +134,12 @@
             label2.TabIndex = 7;
             label2.Text = "Buscar Producto:";
             // 
-            // textBox1
+            // txtBuacarProducto
             // 
-            textBox1.Location = new Point(802, 30);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(338, 27);
-            textBox1.TabIndex = 6;
+            txtBuacarProducto.Location = new Point(802, 30);
+            txtBuacarProducto.Name = "txtBuacarProducto";
+            txtBuacarProducto.Size = new Size(338, 27);
+            txtBuacarProducto.TabIndex = 6;
             // 
             // pictureBox3
             // 
@@ -174,31 +174,33 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
-            // button3
+            // btnEliminar
             // 
-            button3.BackColor = Color.PaleVioletRed;
-            button3.Font = new Font("Arial Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(441, 11);
-            button3.Name = "button3";
-            button3.Size = new Size(153, 66);
-            button3.TabIndex = 2;
-            button3.Text = "Eliminar";
-            button3.TextAlign = ContentAlignment.BottomCenter;
-            button3.UseVisualStyleBackColor = false;
+            btnEliminar.BackColor = Color.PaleVioletRed;
+            btnEliminar.Font = new Font("Arial Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnEliminar.ForeColor = Color.White;
+            btnEliminar.Location = new Point(441, 11);
+            btnEliminar.Name = "btnEliminar";
+            btnEliminar.Size = new Size(153, 66);
+            btnEliminar.TabIndex = 2;
+            btnEliminar.Text = "Eliminar";
+            btnEliminar.TextAlign = ContentAlignment.BottomCenter;
+            btnEliminar.UseVisualStyleBackColor = false;
+            btnEliminar.Click += btnEliminar_Click;
             // 
-            // button2
+            // btnModificar
             // 
-            button2.BackColor = Color.PaleVioletRed;
-            button2.Font = new Font("Arial Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(236, 11);
-            button2.Name = "button2";
-            button2.Size = new Size(153, 66);
-            button2.TabIndex = 1;
-            button2.Text = "Modificar";
-            button2.TextAlign = ContentAlignment.BottomCenter;
-            button2.UseVisualStyleBackColor = false;
+            btnModificar.BackColor = Color.PaleVioletRed;
+            btnModificar.Font = new Font("Arial Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnModificar.ForeColor = Color.White;
+            btnModificar.Location = new Point(236, 11);
+            btnModificar.Name = "btnModificar";
+            btnModificar.Size = new Size(153, 66);
+            btnModificar.TabIndex = 1;
+            btnModificar.Text = "Modificar";
+            btnModificar.TextAlign = ContentAlignment.BottomCenter;
+            btnModificar.UseVisualStyleBackColor = false;
+            btnModificar.Click += btnModificar_Click;
             // 
             // butProducto
             // 
@@ -224,17 +226,17 @@
             button1.TabIndex = 9;
             button1.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvInventario
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.BackgroundColor = Color.Pink;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Nombre, Tomo, Precio, Stock, Ubicación });
-            dataGridView1.Location = new Point(12, 239);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1021, 448);
-            dataGridView1.TabIndex = 2;
+            dgvInventario.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvInventario.BackgroundColor = Color.Pink;
+            dgvInventario.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvInventario.Columns.AddRange(new DataGridViewColumn[] { Nombre, Tomo, Precio, Stock, Ubicación });
+            dgvInventario.Location = new Point(12, 239);
+            dgvInventario.Name = "dgvInventario";
+            dgvInventario.RowHeadersWidth = 51;
+            dgvInventario.Size = new Size(1021, 448);
+            dgvInventario.TabIndex = 2;
             // 
             // Nombre
             // 
@@ -275,24 +277,25 @@
             // 
             panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             panel3.BackColor = Color.SeaShell;
-            panel3.Controls.Add(dataGridView2);
+            panel3.Controls.Add(dgvAlertaStock);
             panel3.Controls.Add(panel4);
             panel3.Location = new Point(1107, 239);
             panel3.Name = "panel3";
             panel3.Size = new Size(470, 448);
             panel3.TabIndex = 3;
             // 
-            // dataGridView2
+            // dgvAlertaStock
             // 
-            dataGridView2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView2.BackgroundColor = Color.Pink;
-            dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Producto, Tomo2, Stock1 });
-            dataGridView2.Location = new Point(13, 83);
-            dataGridView2.Name = "dataGridView2";
-            dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(439, 347);
-            dataGridView2.TabIndex = 1;
+            dgvAlertaStock.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvAlertaStock.BackgroundColor = Color.Pink;
+            dgvAlertaStock.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvAlertaStock.Columns.AddRange(new DataGridViewColumn[] { Producto, Tomo2, Stock1 });
+            dgvAlertaStock.Location = new Point(13, 83);
+            dgvAlertaStock.Name = "dgvAlertaStock";
+            dgvAlertaStock.RowHeadersWidth = 51;
+            dgvAlertaStock.Size = new Size(439, 347);
+            dgvAlertaStock.TabIndex = 1;
+            dgvAlertaStock.CellContentClick += dgvAlertaStock_CellContentClick;
             // 
             // Producto
             // 
@@ -370,7 +373,7 @@
             ClientSize = new Size(1589, 717);
             Controls.Add(panel5);
             Controls.Add(panel3);
-            Controls.Add(dataGridView1);
+            Controls.Add(dgvInventario);
             Controls.Add(panel2);
             Name = "inventario";
             Text = "inventario";
@@ -378,13 +381,13 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBoxBuscar).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvInventario).EndInit();
             panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAlertaStock).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel5.ResumeLayout(false);
@@ -397,20 +400,20 @@
         private Panel panel1;
         private Label label1;
         private Panel panel2;
-        private DataGridView dataGridView1;
-        private Button button3;
-        private Button button2;
+        private DataGridView dgvInventario;
+        private Button btnEliminar;
+        private Button btnModificar;
         private Button butProducto;
         private Panel panel3;
         private PictureBox pictureBox1;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox txtBuacarProducto;
         private Panel panel4;
         private Label label3;
-        private PictureBox pictureBox4;
-        private DataGridView dataGridView2;
+        private PictureBox pictureBoxBuscar;
+        private DataGridView dgvAlertaStock;
         private Button button1;
         private DataGridViewTextBoxColumn Nombre;
         private DataGridViewTextBoxColumn Tomo;

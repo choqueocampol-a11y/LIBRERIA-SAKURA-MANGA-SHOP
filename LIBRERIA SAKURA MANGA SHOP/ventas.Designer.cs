@@ -34,17 +34,17 @@
             panel3 = new Panel();
             label6 = new Label();
             label5 = new Label();
-            button2 = new Button();
-            textBox2 = new TextBox();
+            btnAgregarCarrito = new Button();
+            txtMangaElegido = new TextBox();
             numericUpDown1 = new NumericUpDown();
-            button1 = new Button();
+            btnBuscarmanga = new Button();
             panel4 = new Panel();
             pictureBox1 = new PictureBox();
-            textBox3 = new TextBox();
+            txtTotalPagar = new TextBox();
             label9 = new Label();
-            button4 = new Button();
-            button3 = new Button();
-            dataGridView1 = new DataGridView();
+            btnRegistrarVenta = new Button();
+            btnCancelarVenta = new Button();
+            dgvCarritoCompra = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             Manga = new DataGridViewTextBoxColumn();
             Cantidad = new DataGridViewTextBoxColumn();
@@ -54,16 +54,16 @@
             panel5 = new Panel();
             label3 = new Label();
             label2 = new Label();
-            textBox1 = new TextBox();
-            comboBox2 = new ComboBox();
-            dateTimePicker2 = new DateTimePicker();
+            txtCliente = new TextBox();
+            cmbVendedor = new ComboBox();
+            datetimeFecha = new DateTimePicker();
             label7 = new Label();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCarritoCompra).BeginInit();
             panel5.SuspendLayout();
             SuspendLayout();
             // 
@@ -95,10 +95,10 @@
             panel3.BackColor = Color.SeaShell;
             panel3.Controls.Add(label6);
             panel3.Controls.Add(label5);
-            panel3.Controls.Add(button2);
-            panel3.Controls.Add(textBox2);
+            panel3.Controls.Add(btnAgregarCarrito);
+            panel3.Controls.Add(txtMangaElegido);
             panel3.Controls.Add(numericUpDown1);
-            panel3.Controls.Add(button1);
+            panel3.Controls.Add(btnBuscarmanga);
             panel3.Location = new Point(21, 235);
             panel3.Name = "panel3";
             panel3.Size = new Size(1598, 100);
@@ -127,24 +127,25 @@
             label5.TabIndex = 4;
             label5.Text = "Buscar el Manga";
             // 
-            // button2
+            // btnAgregarCarrito
             // 
-            button2.BackColor = Color.PaleVioletRed;
-            button2.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Location = new Point(1229, 27);
-            button2.Name = "button2";
-            button2.Size = new Size(200, 44);
-            button2.TabIndex = 3;
-            button2.Text = "➕ Agregar al Carrito";
-            button2.UseVisualStyleBackColor = false;
+            btnAgregarCarrito.BackColor = Color.PaleVioletRed;
+            btnAgregarCarrito.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAgregarCarrito.ForeColor = Color.White;
+            btnAgregarCarrito.Location = new Point(1229, 27);
+            btnAgregarCarrito.Name = "btnAgregarCarrito";
+            btnAgregarCarrito.Size = new Size(200, 44);
+            btnAgregarCarrito.TabIndex = 3;
+            btnAgregarCarrito.Text = "➕ Agregar al Carrito";
+            btnAgregarCarrito.UseVisualStyleBackColor = false;
+            btnAgregarCarrito.Click += btnAgregar_Click;
             // 
-            // textBox2
+            // txtMangaElegido
             // 
-            textBox2.Location = new Point(686, 37);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(449, 27);
-            textBox2.TabIndex = 1;
+            txtMangaElegido.Location = new Point(686, 37);
+            txtMangaElegido.Name = "txtMangaElegido";
+            txtMangaElegido.Size = new Size(449, 27);
+            txtMangaElegido.TabIndex = 1;
             // 
             // numericUpDown1
             // 
@@ -156,29 +157,29 @@
             numericUpDown1.Value = new decimal(new int[] { 1, 0, 0, 0 });
             numericUpDown1.ValueChanged += numericUpDown1_ValueChanged;
             // 
-            // button1
+            // btnBuscarmanga
             // 
-            button1.BackColor = Color.PaleVioletRed;
-            button1.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.ForeColor = Color.White;
-            button1.Location = new Point(176, 27);
-            button1.Name = "button1";
-            button1.Size = new Size(358, 44);
-            button1.TabIndex = 0;
-            button1.Text = "🔍 Seleccionar Manga del Inventario";
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            btnBuscarmanga.BackColor = Color.PaleVioletRed;
+            btnBuscarmanga.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBuscarmanga.ForeColor = Color.White;
+            btnBuscarmanga.Location = new Point(176, 27);
+            btnBuscarmanga.Name = "btnBuscarmanga";
+            btnBuscarmanga.Size = new Size(358, 44);
+            btnBuscarmanga.TabIndex = 0;
+            btnBuscarmanga.Text = "🔍 Seleccionar Manga del Inventario";
+            btnBuscarmanga.UseVisualStyleBackColor = false;
+            btnBuscarmanga.Click += button1_Click;
             // 
             // panel4
             // 
             panel4.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             panel4.BackColor = Color.SeaShell;
             panel4.Controls.Add(pictureBox1);
-            panel4.Controls.Add(textBox3);
+            panel4.Controls.Add(txtTotalPagar);
             panel4.Controls.Add(label9);
-            panel4.Controls.Add(button4);
-            panel4.Controls.Add(button3);
-            panel4.Controls.Add(dataGridView1);
+            panel4.Controls.Add(btnRegistrarVenta);
+            panel4.Controls.Add(btnCancelarVenta);
+            panel4.Controls.Add(dgvCarritoCompra);
             panel4.Controls.Add(label8);
             panel4.Location = new Point(21, 370);
             panel4.Name = "panel4";
@@ -196,15 +197,16 @@
             pictureBox1.TabIndex = 6;
             pictureBox1.TabStop = false;
             // 
-            // textBox3
+            // txtTotalPagar
             // 
-            textBox3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            textBox3.BackColor = Color.White;
-            textBox3.Location = new Point(1278, 400);
-            textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
-            textBox3.Size = new Size(125, 27);
-            textBox3.TabIndex = 5;
+            txtTotalPagar.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            txtTotalPagar.BackColor = Color.White;
+            txtTotalPagar.Location = new Point(1278, 400);
+            txtTotalPagar.Name = "txtTotalPagar";
+            txtTotalPagar.ReadOnly = true;
+            txtTotalPagar.Size = new Size(125, 27);
+            txtTotalPagar.TabIndex = 5;
+            txtTotalPagar.TextChanged += txtTotalPagar_TextChanged;
             // 
             // label9
             // 
@@ -219,45 +221,48 @@
             label9.Text = "Total a Pagar";
             label9.Click += label9_Click;
             // 
-            // button4
+            // btnRegistrarVenta
             // 
-            button4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            button4.BackColor = Color.PaleVioletRed;
-            button4.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.ForeColor = Color.White;
-            button4.Location = new Point(686, 389);
-            button4.Name = "button4";
-            button4.RightToLeft = RightToLeft.No;
-            button4.Size = new Size(218, 43);
-            button4.TabIndex = 3;
-            button4.Text = "💾 Registra Venta";
-            button4.UseVisualStyleBackColor = false;
+            btnRegistrarVenta.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnRegistrarVenta.BackColor = Color.PaleVioletRed;
+            btnRegistrarVenta.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRegistrarVenta.ForeColor = Color.White;
+            btnRegistrarVenta.Location = new Point(686, 389);
+            btnRegistrarVenta.Name = "btnRegistrarVenta";
+            btnRegistrarVenta.RightToLeft = RightToLeft.No;
+            btnRegistrarVenta.Size = new Size(218, 43);
+            btnRegistrarVenta.TabIndex = 3;
+            btnRegistrarVenta.Text = "💾 Registra Venta";
+            btnRegistrarVenta.UseVisualStyleBackColor = false;
+            btnRegistrarVenta.Click += btnRegistrarVenta_Click;
             // 
-            // button3
+            // btnCancelarVenta
             // 
-            button3.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            button3.BackColor = Color.PaleVioletRed;
-            button3.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.White;
-            button3.Location = new Point(371, 389);
-            button3.Name = "button3";
-            button3.Size = new Size(205, 43);
-            button3.TabIndex = 2;
-            button3.Text = "\U0001f9f9 Cancelar Venta";
-            button3.UseVisualStyleBackColor = false;
+            btnCancelarVenta.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            btnCancelarVenta.BackColor = Color.PaleVioletRed;
+            btnCancelarVenta.Font = new Font("Arial", 10.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCancelarVenta.ForeColor = Color.White;
+            btnCancelarVenta.Location = new Point(371, 389);
+            btnCancelarVenta.Name = "btnCancelarVenta";
+            btnCancelarVenta.Size = new Size(205, 43);
+            btnCancelarVenta.TabIndex = 2;
+            btnCancelarVenta.Text = "\U0001f9f9 Cancelar Venta";
+            btnCancelarVenta.UseVisualStyleBackColor = false;
+            btnCancelarVenta.Click += btnCancelarVenta_Click;
             // 
-            // dataGridView1
+            // dgvCarritoCompra
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.BackgroundColor = Color.Pink;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { ID, Manga, Cantidad, precio, Subtotal });
-            dataGridView1.GridColor = Color.Pink;
-            dataGridView1.Location = new Point(371, 83);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(1032, 268);
-            dataGridView1.TabIndex = 1;
+            dgvCarritoCompra.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            dgvCarritoCompra.BackgroundColor = Color.Pink;
+            dgvCarritoCompra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvCarritoCompra.Columns.AddRange(new DataGridViewColumn[] { ID, Manga, Cantidad, precio, Subtotal });
+            dgvCarritoCompra.GridColor = Color.Pink;
+            dgvCarritoCompra.Location = new Point(371, 83);
+            dgvCarritoCompra.Name = "dgvCarritoCompra";
+            dgvCarritoCompra.RowHeadersWidth = 51;
+            dgvCarritoCompra.Size = new Size(1032, 268);
+            dgvCarritoCompra.TabIndex = 1;
+            dgvCarritoCompra.CellContentClick += dgvCarritoCompra_CellContentClick;
             // 
             // ID
             // 
@@ -313,9 +318,9 @@
             panel5.BackColor = Color.SeaShell;
             panel5.Controls.Add(label3);
             panel5.Controls.Add(label2);
-            panel5.Controls.Add(textBox1);
-            panel5.Controls.Add(comboBox2);
-            panel5.Controls.Add(dateTimePicker2);
+            panel5.Controls.Add(txtCliente);
+            panel5.Controls.Add(cmbVendedor);
+            panel5.Controls.Add(datetimeFecha);
             panel5.Controls.Add(label7);
             panel5.Location = new Point(21, 117);
             panel5.Name = "panel5";
@@ -344,27 +349,27 @@
             label2.TabIndex = 6;
             label2.Text = "Fecha:";
             // 
-            // textBox1
+            // txtCliente
             // 
-            textBox1.Location = new Point(1106, 35);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(323, 27);
-            textBox1.TabIndex = 5;
+            txtCliente.Location = new Point(1106, 35);
+            txtCliente.Name = "txtCliente";
+            txtCliente.Size = new Size(323, 27);
+            txtCliente.TabIndex = 5;
             // 
-            // comboBox2
+            // cmbVendedor
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(183, 33);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(175, 28);
-            comboBox2.TabIndex = 4;
+            cmbVendedor.FormattingEnabled = true;
+            cmbVendedor.Location = new Point(183, 33);
+            cmbVendedor.Name = "cmbVendedor";
+            cmbVendedor.Size = new Size(175, 28);
+            cmbVendedor.TabIndex = 4;
             // 
-            // dateTimePicker2
+            // datetimeFecha
             // 
-            dateTimePicker2.Location = new Point(633, 33);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(299, 27);
-            dateTimePicker2.TabIndex = 3;
+            datetimeFecha.Location = new Point(633, 33);
+            datetimeFecha.Name = "datetimeFecha";
+            datetimeFecha.Size = new Size(299, 27);
+            datetimeFecha.TabIndex = 3;
             // 
             // label7
             // 
@@ -397,7 +402,7 @@
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvCarritoCompra).EndInit();
             panel5.ResumeLayout(false);
             panel5.PerformLayout();
             ResumeLayout(false);
@@ -410,18 +415,18 @@
         private Panel panel2;
         private Label label2;
         private Panel panel3;
-        private Button button2;
+        private Button btnAgregarCarrito;
         private NumericUpDown numericUpDown1;
-        private TextBox textBox2;
-        private Button button1;
+        private TextBox txtMangaElegido;
+        private Button btnBuscarmanga;
         private Label label6;
         private Label label5;
         private Panel panel4;
         private Label label8;
-        private DataGridView dataGridView1;
-        private Button button4;
-        private Button button3;
-        private TextBox textBox3;
+        private DataGridView dgvCarritoCompra;
+        private Button btnRegistrarVenta;
+        private Button btnCancelarVenta;
+        private TextBox txtTotalPagar;
         private Label label9;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn Manga;
@@ -434,9 +439,9 @@
         private DateTimePicker dateTimePicker1;
         private ComboBox comboBox1;
         private Panel panel5;
-        private TextBox textBox1;
-        private ComboBox comboBox2;
-        private DateTimePicker dateTimePicker2;
+        private TextBox txtCliente;
+        private ComboBox cmbVendedor;
+        private DateTimePicker datetimeFecha;
         private Label label7;
     }
 }

@@ -8,10 +8,7 @@ namespace Libreria_Negocio
     {
         private CompraDatos _compraDatos = new CompraDatos();
 
-        /// <summary>
-        /// Registra la compra completa: cabecera + todos los detalles.
-        /// Devuelve el ID de la compra creada.
-        /// </summary>
+  
         public int RegistrarCompraCompleta(CompraModel compra, List<DetalleCompraModel> detalles)
         {
             if (detalles == null || detalles.Count == 0)
@@ -23,7 +20,6 @@ namespace Libreria_Negocio
             if (compra.ID_Usuario <= 0)
                 throw new Exception("El usuario no es válido.");
 
-            // Calcular total pagado desde los detalles
             decimal total = 0;
             foreach (var d in detalles)
             {
@@ -37,10 +33,8 @@ namespace Libreria_Negocio
             }
             compra.Total_Pagado = total;
 
-            // Registrar cabecera
             int idCompra = _compraDatos.RegistrarCompra(compra);
 
-            // Registrar cada detalle (el SP suma el stock)
             foreach (var d in detalles)
             {
                 d.ID_Compra = idCompra;

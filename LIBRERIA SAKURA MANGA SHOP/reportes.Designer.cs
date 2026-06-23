@@ -207,6 +207,7 @@
             labelTotalVendido.Size = new Size(173, 52);
             labelTotalVendido.TabIndex = 1;
             labelTotalVendido.Text = "Bs 0.00";
+            labelTotalVendido.Click += labelTotalVendido_Click;
             // 
             // panelTarjetaComprado
             // 
@@ -239,6 +240,7 @@
             labelTotalComprado.Size = new Size(173, 52);
             labelTotalComprado.TabIndex = 1;
             labelTotalComprado.Text = "Bs 0.00";
+            labelTotalComprado.Click += labelTotalComprado_Click;
             // 
             // panelTarjetaNeto
             // 
@@ -271,6 +273,7 @@
             labelTotalNeto.Size = new Size(173, 52);
             labelTotalNeto.TabIndex = 1;
             labelTotalNeto.Text = "Bs 0.00";
+            labelTotalNeto.Click += labelTotalNeto_Click;
             // 
             // buttonActualizarResumen
             // 
@@ -283,6 +286,7 @@
             buttonActualizarResumen.TabIndex = 5;
             buttonActualizarResumen.Text = "🔄 Actualizar";
             buttonActualizarResumen.UseVisualStyleBackColor = false;
+            buttonActualizarResumen.Click += buttonActualizarResumen_Click;
             // 
             // panelCalculoCaja
             // 
@@ -342,6 +346,7 @@
             textBoxGastoManual.Size = new Size(160, 29);
             textBoxGastoManual.TabIndex = 3;
             textBoxGastoManual.Text = "0";
+            textBoxGastoManual.TextChanged += textBoxGastoManual_TextChanged;
             // 
             // label15
             // 
@@ -360,6 +365,7 @@
             textBoxNotaGasto.Name = "textBoxNotaGasto";
             textBoxNotaGasto.Size = new Size(400, 29);
             textBoxNotaGasto.TabIndex = 5;
+            textBoxNotaGasto.TextChanged += textBoxNotaGasto_TextChanged;
             // 
             // buttonCalcularCaja
             // 
@@ -372,6 +378,7 @@
             buttonCalcularCaja.TabIndex = 6;
             buttonCalcularCaja.Text = "\U0001f9ee Calcular";
             buttonCalcularCaja.UseVisualStyleBackColor = false;
+            buttonCalcularCaja.Click += buttonCalcularCaja_Click;
             // 
             // labelResultadoFinal
             // 
@@ -395,6 +402,7 @@
             textBoxEfectivoFinal.Size = new Size(220, 34);
             textBoxEfectivoFinal.TabIndex = 8;
             textBoxEfectivoFinal.Text = "Bs 0.00";
+            textBoxEfectivoFinal.TextChanged += textBoxEfectivoFinal_TextChanged;
             // 
             // tabPageReportes
             // 
@@ -439,6 +447,7 @@
             dateTimePickerReporte.Name = "dateTimePickerReporte";
             dateTimePickerReporte.Size = new Size(250, 29);
             dateTimePickerReporte.TabIndex = 1;
+            dateTimePickerReporte.ValueChanged += dateTimePickerReporte_ValueChanged;
             // 
             // buttonVerVentasDia
             // 
@@ -451,6 +460,7 @@
             buttonVerVentasDia.TabIndex = 2;
             buttonVerVentasDia.Text = "\U0001f6d2 Ver Ventas del Día";
             buttonVerVentasDia.UseVisualStyleBackColor = false;
+            buttonVerVentasDia.Click += buttonVerVentasDia_Click;
             // 
             // buttonVerComprasDia
             // 
@@ -463,6 +473,7 @@
             buttonVerComprasDia.TabIndex = 3;
             buttonVerComprasDia.Text = "📦 Ver Compras del Día";
             buttonVerComprasDia.UseVisualStyleBackColor = false;
+            buttonVerComprasDia.Click += buttonVerComprasDia_Click;
             // 
             // panelReporteVentas
             // 
@@ -499,6 +510,7 @@
             dataGridViewVentas.RowHeadersWidth = 51;
             dataGridViewVentas.Size = new Size(741, 576);
             dataGridViewVentas.TabIndex = 1;
+            dataGridViewVentas.CellContentClick += dataGridViewVentas_CellContentClick;
             // 
             // colVentaID
             // 
@@ -575,6 +587,7 @@
             dataGridViewCompras.RowHeadersWidth = 51;
             dataGridViewCompras.Size = new Size(745, 576);
             dataGridViewCompras.TabIndex = 1;
+            dataGridViewCompras.CellContentClick += dataGridViewCompras_CellContentClick;
             // 
             // colCompraID
             // 

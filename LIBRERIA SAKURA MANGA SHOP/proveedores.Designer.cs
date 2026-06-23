@@ -180,6 +180,7 @@
             comboBoxUsuario.Name = "comboBoxUsuario";
             comboBoxUsuario.Size = new Size(280, 29);
             comboBoxUsuario.TabIndex = 1;
+            comboBoxUsuario.SelectedIndexChanged += comboBoxUsuario_SelectedIndexChanged;
             // 
             // label2
             // 
@@ -200,6 +201,7 @@
             dateTimePicker1.Name = "dateTimePicker1";
             dateTimePicker1.Size = new Size(299, 25);
             dateTimePicker1.TabIndex = 3;
+            dateTimePicker1.ValueChanged += dateTimePicker1_ValueChanged;
             // 
             // label3
             // 
@@ -219,6 +221,7 @@
             comboBoxProveedorCompra.Name = "comboBoxProveedorCompra";
             comboBoxProveedorCompra.Size = new Size(315, 29);
             comboBoxProveedorCompra.TabIndex = 5;
+            comboBoxProveedorCompra.SelectedIndexChanged += comboBoxProveedorCompra_SelectedIndexChanged;
             // 
             // panelBuscarProducto
             // 
@@ -266,6 +269,7 @@
             textBoxBuscarProducto.ReadOnly = true;
             textBoxBuscarProducto.Size = new Size(450, 29);
             textBoxBuscarProducto.TabIndex = 2;
+            textBoxBuscarProducto.TextChanged += textBoxBuscarProducto_TextChanged;
             // 
             // numericUpDownCantidadRecibida
             // 
@@ -295,6 +299,7 @@
             textBoxCostoUnitario.Name = "textBoxCostoUnitario";
             textBoxCostoUnitario.Size = new Size(100, 29);
             textBoxCostoUnitario.TabIndex = 6;
+            textBoxCostoUnitario.TextChanged += textBoxCostoUnitario_TextChanged;
             // 
             // buttonSeleccionarProducto
             // 
@@ -307,6 +312,7 @@
             buttonSeleccionarProducto.TabIndex = 3;
             buttonSeleccionarProducto.Text = "🔍 Buscar Producto";
             buttonSeleccionarProducto.UseVisualStyleBackColor = false;
+            buttonSeleccionarProducto.Click += buttonSeleccionarProducto_Click;
             // 
             // buttonAgregarDetalle
             // 
@@ -319,6 +325,7 @@
             buttonAgregarDetalle.TabIndex = 7;
             buttonAgregarDetalle.Text = "➕ Agregar al Detalle";
             buttonAgregarDetalle.UseVisualStyleBackColor = false;
+            buttonAgregarDetalle.Click += buttonAgregarDetalle_Click;
             // 
             // panelDetalleCompra
             // 
@@ -358,6 +365,7 @@
             dataGridViewDetalleCompra.RowHeadersWidth = 51;
             dataGridViewDetalleCompra.Size = new Size(1509, 350);
             dataGridViewDetalleCompra.TabIndex = 1;
+            dataGridViewDetalleCompra.CellContentClick += dataGridViewDetalleCompra_CellContentClick_1;
             // 
             // ID
             // 
@@ -429,6 +437,7 @@
             buttonCancelarCompra.TabIndex = 4;
             buttonCancelarCompra.Text = "\U0001f9f9 Cancelar Compra";
             buttonCancelarCompra.UseVisualStyleBackColor = false;
+            buttonCancelarCompra.Click += buttonCancelarCompra_Click_1;
             // 
             // buttonRegistrarCompra
             // 
@@ -442,6 +451,7 @@
             buttonRegistrarCompra.TabIndex = 5;
             buttonRegistrarCompra.Text = "💾 Registrar Compra";
             buttonRegistrarCompra.UseVisualStyleBackColor = false;
+            buttonRegistrarCompra.Click += buttonRegistrarCompra_Click_1;
             // 
             // tabPageProveedores
             // 
@@ -491,6 +501,7 @@
             textBoxNombreEmpresa.Name = "textBoxNombreEmpresa";
             textBoxNombreEmpresa.Size = new Size(352, 29);
             textBoxNombreEmpresa.TabIndex = 1;
+            textBoxNombreEmpresa.TextChanged += textBoxNombreEmpresa_TextChanged;
             // 
             // label11
             // 
@@ -510,6 +521,7 @@
             textBoxTelefono.Name = "textBoxTelefono";
             textBoxTelefono.Size = new Size(220, 29);
             textBoxTelefono.TabIndex = 3;
+            textBoxTelefono.TextChanged += textBoxTelefono_TextChanged;
             // 
             // buttonRegistrarProveedor
             // 
@@ -522,6 +534,7 @@
             buttonRegistrarProveedor.TabIndex = 4;
             buttonRegistrarProveedor.Text = "➕ Agregar";
             buttonRegistrarProveedor.UseVisualStyleBackColor = false;
+            buttonRegistrarProveedor.Click += buttonRegistrarProveedor_Click;
             // 
             // buttonModificarProveedor
             // 
@@ -534,6 +547,7 @@
             buttonModificarProveedor.TabIndex = 5;
             buttonModificarProveedor.Text = "✏️ Modificar";
             buttonModificarProveedor.UseVisualStyleBackColor = false;
+            buttonModificarProveedor.Click += buttonModificarProveedor_Click;
             // 
             // buttonEliminarProveedor
             // 
@@ -546,6 +560,7 @@
             buttonEliminarProveedor.TabIndex = 6;
             buttonEliminarProveedor.Text = "🗑️ Eliminar";
             buttonEliminarProveedor.UseVisualStyleBackColor = false;
+            buttonEliminarProveedor.Click += buttonEliminarProveedor_Click;
             // 
             // buttonLimpiarProveedor
             // 
@@ -558,6 +573,7 @@
             buttonLimpiarProveedor.TabIndex = 7;
             buttonLimpiarProveedor.Text = "\U0001f9f9 Limpiar";
             buttonLimpiarProveedor.UseVisualStyleBackColor = false;
+            buttonLimpiarProveedor.Click += buttonLimpiarProveedor_Click;
             // 
             // panelBuscarProveedor
             // 
@@ -600,6 +616,7 @@
             buttonBuscarProveedor.TabIndex = 2;
             buttonBuscarProveedor.Text = "🔍 Buscar";
             buttonBuscarProveedor.UseVisualStyleBackColor = false;
+            buttonBuscarProveedor.Click += buttonBuscarProveedor_Click;
             // 
             // panelListaProveedores
             // 
@@ -625,6 +642,7 @@
             dataGridViewProveedores.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewProveedores.Size = new Size(1509, 474);
             dataGridViewProveedores.TabIndex = 0;
+            dataGridViewProveedores.CellContentClick += dataGridViewProveedores_CellContentClick;
             // 
             // ID_Proveedor
             // 

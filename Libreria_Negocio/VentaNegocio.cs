@@ -8,10 +8,7 @@ namespace Libreria_Negocio
     {
         private VentaDatos _ventaDatos = new VentaDatos();
 
-        /// <summary>
-        /// Registra la venta completa: cabecera + todos los detalles.
-        /// Devuelve el ID de la venta creada.
-        /// </summary>
+       
         public int RegistrarVentaCompleta(VentaModel venta, List<DetalleVentaModel> detalles)
         {
             if (detalles == null || detalles.Count == 0)
@@ -23,7 +20,6 @@ namespace Libreria_Negocio
             if (venta.ID_Usuario <= 0)
                 throw new Exception("El usuario no es válido.");
 
-            // Calcular monto total desde los detalles
             decimal total = 0;
             foreach (var d in detalles)
             {
@@ -34,10 +30,8 @@ namespace Libreria_Negocio
             }
             venta.Monto_Total = total;
 
-            // Registrar cabecera
             int idVenta = _ventaDatos.RegistrarVenta(venta);
 
-            // Registrar cada detalle (el SP descuenta el stock)
             foreach (var d in detalles)
             {
                 d.ID_Venta = idVenta;
