@@ -53,6 +53,8 @@
             Nombre = new DataGridViewTextBoxColumn();
             Username = new DataGridViewTextBoxColumn();
             Nombre_Rol = new DataGridViewTextBoxColumn();
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -121,6 +123,7 @@
             textBoxNombre.Name = "textBoxNombre";
             textBoxNombre.Size = new Size(279, 27);
             textBoxNombre.TabIndex = 1;
+            textBoxNombre.TextChanged += textBoxNombre_TextChanged;
             // 
             // label3
             // 
@@ -140,6 +143,7 @@
             textBoxUsername.Name = "textBoxUsername";
             textBoxUsername.Size = new Size(230, 27);
             textBoxUsername.TabIndex = 3;
+            textBoxUsername.TextChanged += textBoxUsername_TextChanged;
             // 
             // label4
             // 
@@ -159,6 +163,7 @@
             textBoxPassword.PasswordChar = '●';
             textBoxPassword.Size = new Size(220, 27);
             textBoxPassword.TabIndex = 5;
+            textBoxPassword.TextChanged += textBoxPassword_TextChanged;
             // 
             // label5
             // 
@@ -178,6 +183,7 @@
             comboBoxRol.Name = "comboBoxRol";
             comboBoxRol.Size = new Size(220, 28);
             comboBoxRol.TabIndex = 7;
+            comboBoxRol.SelectedIndexChanged += comboBoxRol_SelectedIndexChanged;
             // 
             // buttonRegistrar
             // 
@@ -190,6 +196,7 @@
             buttonRegistrar.TabIndex = 8;
             buttonRegistrar.Text = "➕ Agregar";
             buttonRegistrar.UseVisualStyleBackColor = false;
+            buttonRegistrar.Click += buttonRegistrar_Click;
             // 
             // buttonModificar
             // 
@@ -202,6 +209,7 @@
             buttonModificar.TabIndex = 9;
             buttonModificar.Text = "✏️ Modificar";
             buttonModificar.UseVisualStyleBackColor = false;
+            buttonModificar.Click += buttonModificar_Click;
             // 
             // buttonEliminar
             // 
@@ -214,6 +222,7 @@
             buttonEliminar.TabIndex = 10;
             buttonEliminar.Text = "🗑️ Eliminar";
             buttonEliminar.UseVisualStyleBackColor = false;
+            buttonEliminar.Click += buttonEliminar_Click;
             // 
             // buttonLimpiar
             // 
@@ -226,6 +235,7 @@
             buttonLimpiar.TabIndex = 11;
             buttonLimpiar.Text = "\U0001f9f9 Limpiar Campos";
             buttonLimpiar.UseVisualStyleBackColor = false;
+            buttonLimpiar.Click += buttonLimpiar_Click;
             // 
             // panel3
             // 
@@ -238,6 +248,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(1598, 80);
             panel3.TabIndex = 2;
+            panel3.Paint += panel3_Paint;
             // 
             // label6
             // 
@@ -256,6 +267,7 @@
             textBoxBuscar.Name = "textBoxBuscar";
             textBoxBuscar.Size = new Size(500, 27);
             textBoxBuscar.TabIndex = 1;
+            textBoxBuscar.TextChanged += textBoxBuscar_TextChanged;
             // 
             // buttonBuscar
             // 
@@ -268,6 +280,7 @@
             buttonBuscar.TabIndex = 2;
             buttonBuscar.Text = "🔍 Buscar";
             buttonBuscar.UseVisualStyleBackColor = false;
+            buttonBuscar.Click += buttonBuscar_Click;
             // 
             // panel4
             // 
@@ -293,6 +306,7 @@
             dataGridView1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView1.Size = new Size(1566, 522);
             dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // ID_Usuario
             // 
@@ -335,6 +349,7 @@
             Controls.Add(panel1);
             Name = "configuracion";
             Text = "seguridad";
+            Load += configuracion_Load_1;
             panel1.ResumeLayout(false);
             panel2.ResumeLayout(false);
             panel2.PerformLayout();

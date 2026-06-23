@@ -9,9 +9,7 @@ namespace Libreria_Datos
     {
         private ConexionBD conexion = new ConexionBD();
 
-        /// <summary>
-        /// Registra la cabecera de la venta y devuelve el ID generado.
-        /// </summary>
+       
         public int RegistrarVenta(VentaModel venta)
         {
             using (SqlConnection con = conexion.Obtenerconexion())
@@ -34,9 +32,7 @@ namespace Libreria_Datos
             }
         }
 
-        /// <summary>
-        /// Registra un renglón del detalle y descuenta el stock automáticamente (el SP lo hace).
-        /// </summary>
+       
         public void RegistrarDetalleVenta(DetalleVentaModel detalle)
         {
             using (SqlConnection con = conexion.Obtenerconexion())

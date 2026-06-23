@@ -37,6 +37,7 @@ namespace LIBRERIA_SAKURA_MANGA_SHOP
                 }
                 else
                 {
+                    SesionActual.UsuarioLogueado = usuarioLogueado;
                     MenuForm formularioMenu = new MenuForm();
                     formularioMenu.Show();
 
